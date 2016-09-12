@@ -1,0 +1,368 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url("../../images/YbgWPZ.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  line-height: 20px;
+  position: relative;
+  width: 100%;
+  height: 100;
+}
+
+
+.main{
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+
+}
+
+.breadcrumbb{
+  background: #060a0a;
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+}
+
+.breadcrumbb > li {
+  display: inline-block;
+}
+.breadcrumbb > li + li:before {
+  content: "/\00a0";
+  padding: 0 5px;
+  color: #cccccc;
+}
+.breadcrumbb > .active {
+  color: #777777;
+}
+
+.breadcrumbb > li > a{
+  color: #ffffff;
+}
+
+.breadcrumbb > li > a:hover{
+  color: #00b389;
+}
+
+
+.titulo_categoria {
+  background: #0c0c0c;
+  color: #dfeff9;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: Courier, "Courier New", "Helvetica Neue", Helvetica, "Droid Sans", sans-serif;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  padding-left: 14px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  -moz-border-top-left-radius: 2px;
+  -moz-border-top-right-radius: 2px;
+  -webkit-border-top-left-radius: 2px;
+  -webkit-border-top-right-radius: 2px;
+}
+
+.categorias_con_foros {
+  margin-bottom: 4px;
+}
+
+.cajas {
+  width: 100%;
+  padding: 8px 5px 5px 5px;
+  background: #f0f0f0;
+  border: 1px solid #e0e0e0;
+  height: auto!important;
+}
+
+.resaltado_caja {
+  width: 100%;
+  padding: 5px;
+  background: #dddfe6;
+  border: 1px solid #e0e0e0;
+  height: auto!important;
+}
+
+.no_style_list {
+  list-style: none;
+  padding-left: 2px;
+}
+
+.no_style_list li {
+  margin-bottom: 4px;
+}
+
+.foros {
+  width: 100%;
+  height: 100%;
+  padding-left: 5px;
+  background: #f0f0f0;
+  border-left: 4px solid #530000;
+  max-height: 50px;
+  padding-top: 5px;
+}
+
+.foros img{
+  width: auto;
+  z-index: 10;
+  float: left;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.foros div.left_border {
+  border-left: 3px solid #0c0c0c;
+}
+
+.foros div a {
+  color: #0a78ba;
+  font-weight: bold;
+}
+
+.foros div a:hover {
+  color: #52a4d5;
+}
+
+.puntitos {
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.tema_textarea {
+  height: 500px!important;
+}
+
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
+
+.colorBtn{
+  padding: .6em 2em;
+  margin: .6em;
+  border: none;
+  position: relative;
+  color: #ffffff;
+  font-weight: bolder;
+  background-color: #199f8c;
+}
+.colorBtn:hover{
+  background: #002929;
+  color: #ffffff;
+}
+.colorBtn:before{
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #84d4c7;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transition: all .3s;
+}
+.colorBtn:hover:before{
+  width: 100%;
+  left: 0;
+}
+
+@media screen and (max-width: 769px){
+  .colorBtn{
+    padding: .4em 1em;
+  }
+}
+
+
+.wrap {
+  width: 90%;
+  max-width: 500px;
+  padding: 40px;
+  margin: auto;
+  background: #fff;
+  box-shadow: 0px 0px 3px grey; }
+
+.contenedor-formulario {
+  width: 100%;
+  color: #f2f2f2;
+  padding: 50px; }
+.contenedor-formulario .formulario {
+  width: 100%;
+  margin: auto; }
+.contenedor-formulario .formulario .input-group {
+  position: relative;
+  margin-bottom: 32px; }
+.contenedor-formulario .formulario .input-group input[type="text"],
+.contenedor-formulario .formulario .input-group input[type="email"],
+.contenedor-formulario .formulario .input-group input[type="password"] {
+  font-family: "Roboto";
+  font-size: 16px;
+  color: #47bb80;
+  width: 100%;
+  outline: none;
+  padding: 15px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #BBDEFB; }
+.contenedor-formulario .formulario .input-group input[type="text"]:focus, .contenedor-formulario .formulario .input-group input[type="text"]:active,
+.contenedor-formulario .formulario .input-group input[type="email"]:focus,
+.contenedor-formulario .formulario .input-group input[type="email"]:active,
+.contenedor-formulario .formulario .input-group input[type="password"]:focus,
+.contenedor-formulario .formulario .input-group input[type="password"]:active {
+  outline: none;
+  border-bottom: 2px solid #303F9F; }
+.contenedor-formulario .formulario .input-group input[type="text"].error,
+.contenedor-formulario .formulario .input-group input[type="email"].error,
+.contenedor-formulario .formulario .input-group input[type="password"].error {
+  border-bottom: 2px solid #D32F2F; }
+.contenedor-formulario .formulario .input-group input[type="text"].error + label,
+.contenedor-formulario .formulario .input-group input[type="email"].error + label,
+.contenedor-formulario .formulario .input-group input[type="password"].error + label {
+  color: #D32F2F; }
+.contenedor-formulario .formulario .input-group label {
+  color: #303F9F; }
+.contenedor-formulario .formulario .input-group label.label {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin-left: 15px;
+  font-size: 16px;
+  line-height: 16px;
+  position: absolute;
+  top: 16px;
+  left: 0; }
+.contenedor-formulario .formulario .input-group label.label.active {
+  top: -12px;
+  font-size: 12px;
+  line-height: 12px;
+  color: #B6B6B6; }
+.contenedor-formulario .formulario .input-group.checkbox label, .contenedor-formulario .formulario .input-group.radio label {
+  display: inline-block;
+  cursor: pointer;
+  color: #303F9F;
+  position: relative;
+  padding: 5px 15px 5px 51px;
+  font-size: 1em;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+.contenedor-formulario .formulario .input-group.checkbox label:hover, .contenedor-formulario .formulario .input-group.radio label:hover {
+  background: #bbdefb; }
+.contenedor-formulario .formulario .input-group.checkbox label:before, .contenedor-formulario .formulario .input-group.radio label:before {
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  left: 15px;
+  border-radius: 50%;
+  background: none;
+  border: 2px solid #303F9F; }
+.contenedor-formulario .formulario .input-group.error label {
+  color: #D32F2F; }
+.contenedor-formulario .formulario .input-group.error label:hover {
+  background: rgba(211, 47, 47, 0.2); }
+.contenedor-formulario .formulario .input-group.error label:before {
+  border: 2px solid #D32F2F; }
+.contenedor-formulario .formulario .input-group.radio input[type="radio"] {
+  display: none; }
+.contenedor-formulario .formulario .input-group.radio input[type="radio"]:checked + label:before {
+  display: none; }
+.contenedor-formulario .formulario .input-group.radio input[type="radio"]:checked + label {
+  padding: 5px 15px;
+  background: #303F9F;
+  border-radius: 2px;
+  color: #f2f2f2; }
+.contenedor-formulario .formulario .input-group.checkbox label:before {
+  border-radius: 3px; }
+.contenedor-formulario .formulario .input-group.checkbox input[type="checkbox"] {
+  display: none; }
+.contenedor-formulario .formulario .input-group.checkbox input[type="checkbox"]:checked + label:before {
+  display: none; }
+.contenedor-formulario .formulario .input-group.checkbox input[type="checkbox"]:checked + label {
+  background: #303F9F;
+  color: #f2f2f2;
+  padding: 5px 15px; }
+.contenedor-formulario .formulario input[type="submit"] {
+  background: #0d112a;
+  border-radius: 1px;
+  border: 2px solid #f2f2f2;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Roboto";
+  font-size: 16px;
+  padding: 15px;
+  width: 100%;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+.contenedor-formulario .formulario input[type="submit"]:hover {
+  background: #111637; }
+
+footer{
+  background-image: url("../../images/skriptedfort.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 2px 0 10px #ffffff;
+  background-color: transparent !important;
+  background-attachment: fixed;
+  bottom: 0;
+  color: #530000;
+  clear: both;
+  -webkit-box-shadow: 2px 0 10px #ffffff;
+  -moz-box-shadow: 2px 0 10px #ffffff;
+  min-width: 1000px;
+  margin: auto;
+  padding: 40px 40px;
+  position: relative;;
+  width: 100%;
+}
+
+.social{
+
+}
+
+.icon{
+  width: 100px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-box-shadow: 0 5px 10px #ffffff;
+  -moz-box-shadow: 0 5px 10px #ffffff;
+  box-shadow: 8px 5px 5px #000000, 4px 6px 11px #000000 inset,4px 2px 15px #000000 inset,10px 6px 11px #000000 inset;
+  padding-bottom: 20px;
+}
+
+.mbr-overlay{
+  opacity: 0.7;
+  background-color: rgb(68, 68, 68);
+}
+.mbr-footer__copyright{
+  padding: 15px;
+}
