@@ -1,10 +1,12 @@
 <footer>
-        <div class="social pull-right">
-            <a class="icon mbr-social-icons__icon socicon-bg-twitter" title="Twitter" target="_blank" href="https://www.twitter.com/informaticDeath"><i class="socicon socicon-twitter"></i></a>
-            <a class="icon mbr-social-icons__icon socicon-bg-facebook" title="Facebook" target="_blank" href="#"><i class="socicon socicon-facebook"></i></a>
-            <a class="icon mbr-social-icons__icon socicon-bg-googleplus" title="Google+" target="_blank" href="#"><i class="socicon socicon-googleplus"></i></a>
-            <a class="icon mbr-social-icons__icon socicon-bg-youtube" title="YouTube" target="_blank" href="#"><i class="socicon socicon-youtube"></i></a>
-            <a class="icon mbr-social-icons__icon socicon-bg-github" title="GitHub" target="_blank" href="#"><i class="socicon socicon-github"></i></a>
+        <div class="social">
+            <ul>
+                <li><a class="icon socicon-bg-twitter" title="Twitter" target="_blank" href="https://www.twitter.com/informaticDeath"><i class="socicon socicon-twitter"></i></a></li>
+                <li><a class="icon socicon-bg-facebook" title="Facebook" target="_blank" href="#"><i class="socicon socicon-facebook"></i></a></li>
+                <li><a class="icon socicon-bg-googleplus" title="Google+" target="_blank" href="#"><i class="socicon socicon-googleplus"></i></a></li>
+                <li><a class="icon socicon-bg-youtube" title="YouTube" target="_blank" href="#"><i class="socicon socicon-youtube"></i></a></li>
+                <li><a class="icon socicon-bg-github" title="GitHub" target="_blank" href="https://github.com/dead-88"><i class="socicon socicon-github"></i></a></li>
+            </ul>
         </div>
 
         <p class="">

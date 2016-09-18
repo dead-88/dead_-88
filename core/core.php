@@ -1,6 +1,6 @@
 <?php
 /*
-  EL NÚCLEO DE LA APLICACIÓN!
+  Nucleo de la aplicacion
 */
 
 session_start();
@@ -14,8 +14,8 @@ define('DB_NAME','foro');
 
 #Constantes de la APP
 define('HTML_DIR','html/');
-define('APP_TITLE','Skripted');
-define('APP_COPY','Copyright &copy ' . date('Y',time()) . ' Create By Dead_*88 & ClearDeath .');
+define('APP_TITLE','InformaticDeath');
+define('APP_COPY','Copyright &copy ' . date('Y',time()) . ' Create By Dead_*88, ClearDeath & informaticDeath .');
 define('APP_URL','http://127.0.0.1/foro/');
 
 #Constantes de PHPMailer

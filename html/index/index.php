@@ -2,7 +2,8 @@
 
 <body class="body">
 <section class="engine">
-    <a rel="nofollow" href="#"><?php echo APP_TITLE ?></a></section>
+    <a rel="nofollow" href="#"><?php echo APP_TITLE ?></a>
+</section>
 
 <?php include(HTML_DIR . '/overall/topnav.php'); ?>
 
@@ -24,7 +25,7 @@
   ?>
 
 <div class="row container">
-    <ol class="breadcrumbb">
+    <ol class="breadcrumbb row">
     <?php
         if(isset($_SESSION['app_id']) and $_users[$_SESSION['app_id']]['permisos'] >= 2) {
           echo '
@@ -38,14 +39,13 @@
 
       <li>
           <a href="?view=index">
-              <i class="fa fa-home"></i> Inicio
+              <span class="fa fa-home"></span> Inicio
           </a>
       </li>
     </ol>
 </div>
 <?php
 
-//if(isset($_SESSION['app_id']) and $_users[$_SESSION['app_id']] >= 0){
     if(false != $_categorias) {
         $prepare_sql = $db->prepare("SELECT id FROM foros WHERE id_categoria = ? ;");
         $prepare_sql->bind_param('i',$id_categoria);
@@ -110,19 +110,6 @@
                 </div>
               </div>';
     }
-//}else{
-//    echo '<div class="row categorias_con_foros">
-//            <div class="col-sm-12">
-//                <div class="row titulo_categoria">'. APP_TITLE . '</div>
-//                <div class="row foros">
-//                  <div class="col-md-12" style="height:50px;line-height: 37px;">
-//                    Debes <a href="#login" data-toggle="modal" data-target="#Login">Iniciar Sesión</a> Para Ver El Contenido Del Foro.
-//                  </div>
-//                </div>
-//            </div>
-//        </div>';
-//}
-
 ?>
 
 </div>
@@ -130,19 +117,6 @@
 
 
 <?php include(HTML_DIR . 'overall/footer.php'); ?>
-
-<script language="JavaScript">
-$(document).ready(function () {
-  $(window).scroll(function () {
-    var barra = $(window).scrollTop();
-    var posicion = barra * 0.90;
-
-    $('.body').css({
-      'background-position' : '0 ' + posicion + 'px'
-    });
-  });
-});
-</script>
 
 </body>
 </html>

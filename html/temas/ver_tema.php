@@ -14,21 +14,28 @@
   if(isset($_SESSION['app_id']) and $_users[$_SESSION['app_id']] >= 0){
 
     echo '<div class="row container">
-    <ol class="breadcrumbb">
-
-  <div class="pull-right">';
+             <ol class="breadcrumbb row">
+                <div class="pull-right">';
 
     $permisos_o_dueno = ($_users[$_SESSION['app_id']]['permisos'] > 0 or $tema['id_dueno'] == $_SESSION['app_id']);
 
     if($permisos_o_dueno) {
       if($tema['estado'] == 1) {
-        echo '<div class="mbr-navbar__column"><ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-inverse mbr-buttons--active"><li class="mbr-navbar__item">
-             <a class="colorBtn" href="?view=temas&mode=close&id='.$_GET['id'].'&id_foro='. $_GET['id_foro'] .'&estado=0">CERRAR</a>
-         </li></ul></div>';
+        echo '<div class="mbr-navbar__column">
+                 <ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-inverse mbr-buttons--active">
+                    <li class="mbr-navbar__item">
+                        <a class="colorBtn" href="?view=temas&mode=close&id='.$_GET['id'].'&id_foro='. $_GET['id_foro'] .'&estado=0">CERRAR</a>
+                    </li>
+                 </ul>
+              </div>';
       }
-      echo '<div class="mbr-navbar__column"><ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-inverse mbr-buttons--active"><li class="mbr-navbar__item">
-           <a class="colorBtn" href="?view=temas&mode=delete&id='.$_GET['id'].'&id_foro='. $_GET['id_foro'] .'">BORRAR</a>
-       </li></ul></div>';
+      echo '<div class="mbr-navbar__column">
+                <ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-inverse mbr-buttons--active">
+                    <li class="mbr-navbar__item">
+                        <a class="colorBtn" href="?view=temas&mode=delete&id='.$_GET['id'].'&id_foro='. $_GET['id_foro'] .'">BORRAR</a>
+                    </li>
+                </ul>
+            </div>';
     }
 
     if($tema['estado'] == 1) {
@@ -59,7 +66,7 @@
 
     echo '<div class="row categorias_con_foros">
   <div class="col-sm-12">
-      <div class="row titulo_categoria"><?php echo $tema[\'titulo\']; ?></div>
+      <div class="row titulo_categoria">'.$tema['titulo'].'</div>
 
       <div class="row cajas">
         <div class="col-md-2">
@@ -71,7 +78,7 @@
             <img src="views/images/led-icons/'.GetUserStatus($_users[$tema['id_dueno']]['ultima_conexion']).'" />
 
             <br />
-            <b style="color: green;">**'.$_users[$tema['id_dueno']]['rango'].'**</b>
+            <b style="color: green;">'.$_users[$tema['id_dueno']]['rango'].'</b>
             <br /><br />
         </center>
 
@@ -94,7 +101,7 @@
   }
 
     echo '<hr>
-          <p>
+          <p class="text-center">
             '.BBcode($_users[$tema['id_dueno']]['firma']).'
           </p>
         </div>

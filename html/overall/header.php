@@ -7,7 +7,7 @@
   <meta name="generator" content="Mobirise v2.8.3, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="views/images/informaticd.png" />
-  <meta name="description" content="skripted hacking">
+  <meta name="description" content="InformaticDeath hacking">
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:700,400&amp;subset=cyrillic,latin,greek,vietnamese">
   <link rel="stylesheet" href="views/bootstrap/css/bootstrap.min.css">
