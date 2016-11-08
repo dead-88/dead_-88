@@ -21,39 +21,15 @@
 
     if($permisos_o_dueno) {
       if($tema['estado'] == 1) {
-        echo '<div class="mbr-navbar__column">
-                 <ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-inverse mbr-buttons--active">
-                    <li class="mbr-navbar__item">
-                        <a class="colorBtn" href="?view=temas&mode=close&id='.$_GET['id'].'&id_foro='. $_GET['id_foro'] .'&estado=0">CERRAR</a>
-                    </li>
-                 </ul>
-              </div>';
+        echo '<a class="colorBtn" href="?view=temas&mode=close&id='.$_GET['id'].'&id_foro='. $_GET['id_foro'] .'&estado=0">CERRAR</a>';
       }
-      echo '<div class="mbr-navbar__column">
-                <ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-inverse mbr-buttons--active">
-                    <li class="mbr-navbar__item">
-                        <a class="colorBtn" href="?view=temas&mode=delete&id='.$_GET['id'].'&id_foro='. $_GET['id_foro'] .'">BORRAR</a>
-                    </li>
-                </ul>
-            </div>';
+      echo '<a class="colorBtn" href="?view=temas&mode=delete&id='.$_GET['id'].'&id_foro='. $_GET['id_foro'] .'">BORRAR</a>';
     }
 
     if($tema['estado'] == 1) {
-      echo '<div class="mbr-navbar__column">
-                <ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-inverse mbr-buttons--active">
-                    <li class="mbr-navbar__item">
-                        <a class="colorBtn" href="?view=temas&mode=responder&id='.$_GET['id'].'&id_foro='. $_GET['id_foro'] .'">RESPONDER</a>
-                    </li>
-                 </ul>
-            </div>';
+      echo '<a class="colorBtn" href="?view=temas&mode=responder&id='.$_GET['id'].'&id_foro='. $_GET['id_foro'] .'">RESPONDER</a>';
     } else if($permisos_o_dueno and $tema['estado'] == 0) {
-      echo '<div class="mbr-navbar__column">
-                <ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-inverse mbr-buttons--active">
-                    <li class="mbr-navbar__item">
-                        <a class="colorBtn" href="?view=temas&mode=close&id='.$_GET['id'].'&id_foro='. $_GET['id_foro'] .'&estado=1">ABRIR</a>
-                    </li>
-                 </ul>
-            </div>';
+      echo '<a class="colorBtn" href="?view=temas&mode=close&id='.$_GET['id'].'&id_foro='. $_GET['id_foro'] .'&estado=1">ABRIR</a>';
     }
 
     echo '</div>
@@ -133,8 +109,8 @@
 
 
             </div>
-            <div class="col-md-10">
-              <blockquote class="text-left">
+            <div class="col-md-10 msj">
+              <blockquote class="text-justify">
                 '.BBcode($resp['contenido']).'
               </blockquote>
               <hr />

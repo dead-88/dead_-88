@@ -20,5 +20,3 @@ if(!isset($_SESSION['app_id']) and isset($_GET['key'])) {
 } else {
   header('location: ?view=index');
 }
-
-?>

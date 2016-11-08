@@ -1,7 +1,11 @@
 <?php include(HTML_DIR . 'overall/header.php'); ?>
 
 <body>
-<section class="engine"><a rel="nofollow" href="#"><?php echo APP_TITLE ?></a></section>
+<section class="engine">
+    <a rel="nofollow" href="#">
+        <?php echo APP_TITLE ?>
+    </a>
+</section>
 
 <?php include(HTML_DIR . '/overall/topnav.php'); ?>
 
@@ -39,27 +43,27 @@
 
           if(false != $_foros) {
            $HTML = '
-            <table class="table">
-                <thead class="thead-default">
-                <tr>
-                    <th>ID</th>
-                    <th>Foros</th>
-                    <th>Mensajes</th>
-                    <th>Temas</th>
-                    <th>Categoría</th>
-                    <th>Estado</th>
-                    <th>Acciones</th>
-                </tr>
-                </thead>
-                <tbody>
-           ';
+            <table class="table-addtwo row">';
 
             foreach($_foros as $id_foro => $content_array) {
 
                 $estado = $_foros[$id_foro]['estado'] == 1 ? 'Abierto' : 'Cerrado';
 
-                $HTML .= '<tr>
-                  <th scope="row">'.$_foros[$id_foro]['id'].'</th>
+                $HTML .= '
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Foros</th>
+                        <th>Mensajes</th>
+                        <th>Temas</th>
+                        <th>Categoría</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>'.$_foros[$id_foro]['id'].'</td>
                   <td>'.$_foros[$id_foro]['nombre'].'</td>
                   <td>'.$_foros[$id_foro]['cantidad_mensajes'].'</td>
                   <td>'.$_foros[$id_foro]['cantidad_temas'].'</td>
@@ -67,10 +71,16 @@
                   <td>'. $estado .'</td>
                   <td>
                   <div class="btn-group">
-                      <a href="#" class="colorBtn btn btn-primary dropdown-toggle" data-toggle="dropdown">Acciones <span class="caret"></span></a>
+                      <a href="#" class="colorBtn btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                        Acciones <span class="caret"></span>
+                      </a>
                       <ul class="dropdown-menu">
-                         <li><a href="?view=configforos&mode=edit&id='.$_foros[$id_foro]['id'].'">Editar</a></li>
-                         <li><a onclick="DeleteItem(\'¿Está seguro de eliminar esta categoría?\',\'?view=configforos&mode=delete&id='.$_foros[$id_foro]['id'].'\')">Eliminar</a></li>
+                         <li>
+                            <a href="?view=configforos&mode=edit&id='.$_foros[$id_foro]['id'].'">Editar</a>
+                         </li>
+                         <li>
+                            <a onclick="DeleteItem(\'¿Está seguro de eliminar esta categoría?\',\'?view=configforos&mode=delete&id='.$_foros[$id_foro]['id'].'\')">Eliminar</a>
+                         </li>
                       </ul>
                     </div>
                   </td>

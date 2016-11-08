@@ -43,7 +43,7 @@
            <?php
 
            if(false != $_categorias) {
-            $HTML = '<table class="table"><thead><tr>
+            $HTML = '<table class="table-add row"><thead><tr>
             <th style="width: 10%">Id</th>
             <th style="width: 70%">Nombre de categoría</th>
             <th style="width: 20%">Acciones</th>

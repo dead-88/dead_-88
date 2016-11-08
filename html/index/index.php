@@ -41,6 +41,7 @@
           <a href="?view=index">
               <span class="fa fa-home"></span> Inicio
           </a>
+          <marquee style="color:#ffffff;" direction="left">Lucha Por Tus Sueños...</marquee>
       </li>
     </ol>
 </div>
@@ -57,7 +58,7 @@
                        <div class="row titulo_categoria">'.$_categorias[$id_categoria]['nombre'].'</div>';
             if($prepare_sql->num_rows > 0) {
                 $prepare_sql->bind_result($id_del_foro);
-                echo '<table width="100%" class="table foros row">';
+                echo '<table class="table-run row">';
                 while($prepare_sql->fetch()) {
 
                     if($_foros[$id_del_foro]['estado'] == 1) {
@@ -72,7 +73,7 @@
                         $ultimo_tema = '<a href="temas/'.UrlAmigable($_foros[$id_del_foro]['id_ultimo_tema'],$_foros[$id_del_foro]['ultimo_tema'],$id_del_foro).'">'.$_foros[$id_del_foro]['ultimo_tema'].'</a>';
                     }
 
-                    echo '<thead class="">
+                    echo '<thead>
                                 <tr>
                                   <th></th>
                                   <th>
@@ -81,7 +82,7 @@
                                       '.$_foros[$id_del_foro]['descrip'].'</th>
                                   <th>'.number_format($_foros[$id_del_foro]['cantidad_temas'],0,',','.') .' Temas<br />
                                       '.number_format($_foros[$id_del_foro]['cantidad_mensajes'],0,',','.') .' Mensajes</th>
-                                  <th><p class="text-center">Ultimo Tema: '.$ultimo_tema.'</p></th>
+                                  <th><p class="text-left">Ultimo Tema: '.$ultimo_tema.'</p></th>
                                 </tr>
                           </thead>';
                 }
@@ -89,7 +90,7 @@
             } else {
                 echo '<div class="row foros table">
                           <div class="col-md-12" style="height:50px;line-height: 37px;">
-                            No existe ningún foro.
+                            No existe ningúna categoría.
                           </div>
                       </div>';
             }

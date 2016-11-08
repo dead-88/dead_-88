@@ -26,12 +26,18 @@ body{
 
 .breadcrumbb{
   background: #060a0a;
-  padding: 8px 15px;
+  padding: 15px 20px;
   margin-bottom: 20px;
   list-style: none;
   -webkit-border-radius:5px;
   -moz-border-radius:5px;
   border-radius:5px;
+  white-space: nowrap;
+  overflow: auto;
+}
+
+.breadcrumbb > div{
+  margin-top: 6px;
 }
 
 .breadcrumbb > li {
@@ -102,6 +108,103 @@ body{
   margin-bottom: 4px;
 }
 
+.table-run{
+  background: #f0f0f0;
+  border-left: 4px solid #530000;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.table-run tr{
+  border: 1px solid #dddddd;
+}
+
+.table-run td, .table-run th{
+  padding: 10px;
+  text-align: left;
+}
+
+.table-run th {
+  text-transform: full-size-kana;
+  letter-spacing: 1px;
+}
+
+table.table-add,table.t_auto,table.table-addtwo,table.t_autotwo{
+  background: #f0f0f0;
+  border-left: 4px solid #530000;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  margin: 0 0 50px 0;
+}
+
+.table-add th,.t_auto th,.table-addtwo th,.t_autotwo th{
+  border: 1px solid #dddddd;
+  padding: 5px;
+  text-align: center;
+}
+
+.table-add td, .t_auto td,.table-addtwo td, .t_autotwo td{
+  border-bottom: 1px solid #cccccc;
+  padding: 5px;
+  text-align: center;
+}
+
+.table-add tr:last-child td,.t_auto tr:last-child td,.table-addtwo tr:last-child td,.t_autotwo tr:last-child td{
+  border: 0;
+}
+
+.tbl,.tbltwo{
+  width: auto;
+  min-width: 100%;
+}
+
+.t_auto th,.t_auto td,.t_autotwo th,.t_autotwo td{
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 768px), (min-width: 768px) and (max-width: 1024px){
+
+  table.table-add, .table-add thead, .table-add tbody, .table-add th, .table-add td, .table-add tr,table.table-addtwo, .table-addtwo thead, .table-addtwo tbody, .table-addtwo th, .table-addtwo td, .table-addtwo tr{display: block}
+
+  .table-add thead tr,.table-addtwo thead tr{position: absolute;
+    top: -9999px; left: -9999px}
+
+  .table-add tr,.table-addtwo tr{border: 1px solid #cccccc}
+
+  .table-add td,.table-addtwo td{border: none;border-bottom: 1px solid #cccccc;position: relative;padding-left: 45%;text-align: left;}
+
+  .table-add td:before,.table-addtwo td:before{position: absolute;
+    top: 6px; left: 6px; width: 40%;padding-right: 10px; white-space: nowrap;font-weight: bolder}
+
+  .table-add td:nth-of-type(1):before{content: "ID:";}
+  .table-add td:nth-of-type(2):before{content: "Categoria:";}
+  .table-add td:nth-of-type(3):before{content: "Acciones:";}
+
+  .table-addtwo td:nth-of-type(1):before{content: "ID:";}
+  .table-addtwo td:nth-of-type(2):before{content: "Foro:";}
+  .table-addtwo td:nth-of-type(3):before{content: "Mensajes:";}
+  .table-addtwo td:nth-of-type(4):before{content: "Temas:";}
+  .table-addtwo td:nth-of-type(5):before{content: "Categoria:";}
+  .table-addtwo td:nth-of-type(6):before{content: "Estado:";}
+  .table-addtwo td:nth-of-type(7):before{content: "Acciones:";}
+
+  .descarto,.descartotwo {display: none}
+  .fontsize,.fontsizetwo{font-size: 10px}
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 480px){
+  .descarto,.descartotwo{display: none}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+  .descarto,.descartotwo{display: none}
+  .fontsize,.fontsizetwo{font-size: 10px}
+}
+
 .foros {
   width: 100%;
   height: 100%;
@@ -170,6 +273,7 @@ hr {
   color: #ffffff;
   font-weight: bolder;
   background-color: #199f8c;
+  white-space: nowrap;
 }
 .colorBtn:hover{
   background: #002929;
@@ -190,13 +294,6 @@ hr {
   width: 100%;
   left: 0;
 }
-
-@media screen and (max-width: 769px){
-  .colorBtn{
-    padding: .4em 1em;
-  }
-}
-
 
 .wrap {
   width: 90%;
@@ -340,7 +437,7 @@ footer{
 
 .social{
   position: fixed;
-  left: 0;
+  right: 0;
   top: 150px;
   z-index: 2000;
   width: 50px;
@@ -378,16 +475,56 @@ footer{
   }
 }
 
-@media screen and (max-width: 429px){
+@media screen and (max-width: 480px){
+    .table-run tr{
+        margin-bottom: 2px;
+        display: block;
+        border-bottom: 3px solid #dddddd;
+    }
+
+    .table-run th{
+        display: block;
+        text-align: left;
+    }
+
+    .table-run td:last-child{
+        border-bottom: 0;
+    }
+
+    .table-run th:before{
+        content: attr(data-label);
+        float: left;
+    }
+
+  .table-add tr{
+        margin-bottom: 2px;
+        display: block;
+        border-bottom: 3px solid #dddddd;
+    }
+
+    .table-add th{
+        display: block;
+        text-align: left;
+    }
+
+    .table-add td:last-child{
+        border-bottom: 0;
+    }
+
+    .table-add th:before{
+        content: attr(data-label);
+        float: left;
+    }
+
+
+
   .colorBtn{
-    padding: .6em 2em;
-    margin: .6em;
+    margin: .8em;
     border: none;
     position: relative;
     color: #ffffff;
     font-weight: bolder;
     background-color: #199f8c;
-    float: inherit;
   }
 
   .social{
@@ -396,6 +533,17 @@ footer{
     top: 150px;
     z-index: 2000;
   }
+}
+
+.msj{
+  text-align: justify;
+  overflow: auto;
+}
+
+blockquote{
+  position: relative;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .icon{
