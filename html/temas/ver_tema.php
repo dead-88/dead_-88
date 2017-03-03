@@ -28,7 +28,7 @@
 
     if($tema['estado'] == 1) {
       echo '<a class="colorBtn" href="?view=temas&mode=responder&id='.$_GET['id'].'&id_foro='. $_GET['id_foro'] .'">RESPONDER</a>';
-    } else if($permisos_o_dueno and $tema['estado'] == 0) {
+    } else if($permisos_o_dueno and $tema['estado'] == 0){
       echo '<a class="colorBtn" href="?view=temas&mode=close&id='.$_GET['id'].'&id_foro='. $_GET['id_foro'] .'&estado=1">ABRIR</a>';
     }
 
@@ -110,10 +110,7 @@
 
             </div>
             <div class="col-md-10 msj">
-              <blockquote class="text-justify">
-                '.BBcode($resp['contenido']).'
-              </blockquote>
-              <hr />
+              <blockquote>'.BBcode($resp['contenido']).'</blockquote>
               <p class="text-center">
                 '. BBcode($_users[$resp['id_dueno']]['firma']) .'
               </p>

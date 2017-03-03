@@ -31,9 +31,9 @@
           <center>
 
             <img src="views/app/images/users/<?php echo $_users[$id_usuario]['img']; ?>" class="thumbnail" height="120" />
-
-            <strong><?php echo $_users[$id_usuario]['user']; ?></strong>
-            <img src="views/images/led-icons/<?php echo GetUserStatus($_users[$id_usuario]['ultima_conexion']); ?>" />
+              <strong><?php echo $_users[$id_usuario]['user']; ?></strong>
+              <br>
+              <img src="views/images/led-icons/<?php echo GetUserStatus($_users[$id_usuario]['ultima_conexion']); ?>" />
 
             <br />
             <b style="color: #530000;"><?php echo $_users[$id_usuario]['rango']; ?></b>

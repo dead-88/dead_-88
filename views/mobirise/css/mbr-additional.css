@@ -80,10 +80,16 @@
   font-size: 16px;
 }
 #ext_menu-0.mbr-navbar--stuck .mbr-navbar__section {
-  background: #030303;
+  background-image: url("../../images/3924908-code-wallpapers.jpg");
+  background-size: cover;
+  background-position: 1000px;
+  background-attachment: fixed;
 }
 #ext_menu-0 .mbr-navbar__section {
-  background: rgba(0, 0, 0, 1);
+  /*background: rgba(0, 0, 0, 1);*/
+  background-image: url("../../images/3924908-code-wallpapers.jpg");
+  background-position: bottom;
+  background-attachment: fixed;
 }
 
 .colorRun{

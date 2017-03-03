@@ -1,3 +1,4 @@
+
 <?php include(HTML_DIR . 'overall/header.php'); ?>
 
 <body class="body">
@@ -41,7 +42,6 @@
           <a href="?view=index">
               <span class="fa fa-home"></span> Inicio
           </a>
-          <marquee style="color:#ffffff;" direction="left">Lucha Por Tus Sueños...</marquee>
       </li>
     </ol>
 </div>
@@ -78,8 +78,9 @@
                                   <th></th>
                                   <th>
                                     <img src="views/app/images/foros/foro_leido'.$extension.'" />
-                                        <a href="foros/'.UrlAmigable($id_del_foro,$_foros[$id_del_foro]['nombre']).'">'.$_foros[$id_del_foro]['nombre'].'</a> <br>
-                                      '.$_foros[$id_del_foro]['descrip'].'</th>
+                                        <a class="text-capitalize" href="foros/'.UrlAmigable($id_del_foro,$_foros[$id_del_foro]['nombre']).'">'.$_foros[$id_del_foro]['nombre'].'</a>
+                                        <br>'.$_foros[$id_del_foro]['descrip'].'
+                                  </th>
                                   <th>'.number_format($_foros[$id_del_foro]['cantidad_temas'],0,',','.') .' Temas<br />
                                       '.number_format($_foros[$id_del_foro]['cantidad_mensajes'],0,',','.') .' Mensajes</th>
                                   <th><p class="text-left">Ultimo Tema: '.$ultimo_tema.'</p></th>

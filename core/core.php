@@ -7,15 +7,15 @@ session_start();
 date_default_timezone_set('America/Bogota');
 
 #Constantes de conexión
-define('DB_HOST','localhost');
+define('DB_HOST','127.0.0.1');
 define('DB_USER','root');
 define('DB_PASS','');
 define('DB_NAME','foro');
 
 #Constantes de la APP
 define('HTML_DIR','html/');
-define('APP_TITLE','InformaticDeath');
-define('APP_COPY','Copyright &copy ' . date('Y',time()) . ' Create By Dead_*88, ClearDeath & informaticDeath .');
+define('APP_TITLE','Skripted SEC - Informatic-Death');
+define('APP_COPY','Copyright &copy ' . date('Y',time()) . ' Create By Dead_*88 & BL0CK_LT3 - informatic-Death - Skripted SEC');
 define('APP_URL','http://127.0.0.1/foro/');
 
 #Constantes de PHPMailer

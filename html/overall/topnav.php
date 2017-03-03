@@ -6,7 +6,7 @@
                     <span class="mbr-navbar__brand-link mbr-brand mbr-brand--inline">
                         <span class="mbr-brand__logo">
                             <a href="?view=index">
-                                <img class="mbr-navbar__brand-img mbr-brand__img img-circle" src="views/images/circulos,-fondo-negro,-blanco-y-negro-197264.jpg" alt="readError">
+                                <img class="mbr-navbar__brand-img mbr-brand__img img-circle" src="views/images/informatic01.jpg" alt="readError">
                             </a>
                         </span>
                     </span>
