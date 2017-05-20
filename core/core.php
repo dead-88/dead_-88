@@ -15,13 +15,13 @@ define('DB_NAME','foro');
 #Constantes de la APP
 define('HTML_DIR','html/');
 define('APP_TITLE','Skripted SEC - Informatic-Death');
-define('APP_COPY','Copyright &copy ' . date('Y',time()) . ' Create By Dead_*88 & BL0CK_LT3 - informatic-Death - Skripted SEC');
+define('APP_COPY','Copyright &copy ' . date('Y',time()) . ' Created By Dead_*88 & BL0CK_LT3 - informatic-Death - Skripted SEC');
 define('APP_URL','http://127.0.0.1/foro/');
 
 #Constantes de PHPMailer
-define('PHPMAILER_HOST','p3plcpnl0173.prod.phx3.secureserver.net');
-define('PHPMAILER_USER','public@ocrend.com');
-define('PHPMAILER_PASS','Prinick2016');
+define('PHPMAILER_HOST','mail.skripted-sec.org');
+define('PHPMAILER_USER','admin@skripted-sec.org');
+define('PHPMAILER_PASS','skripted23');
 define('PHPMAILER_PORT',465);
 
 #Constantes básicas de personalización

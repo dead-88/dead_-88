@@ -15,7 +15,7 @@ if($db->rows($sql) > 0) {
   $mail->CharSet = "UTF-8";
   $mail->Encoding = "quoted-printable";
   $mail->isSMTP();                                      // Set mailer to use SMTP
-  $mail->Host = PHPMAILER_HOST;  // Specify main and backup SMTP servers
+  $mail->Host = PHPMAILER_HOST;       // Specify main and backup SMTP servers
   $mail->SMTPAuth = true;                               // Enable SMTP authentication
   $mail->Username = PHPMAILER_USER;                 // SMTP username
   $mail->Password = PHPMAILER_PASS;                           // SMTP password
